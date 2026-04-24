@@ -9,7 +9,7 @@ def insert():
         
         db=connection()
         mycursor=db.cursor()
-        query="INSERT INTO expenses(name,price,catagory,date) VALUES (%s,%s,%s,%s);"
+        query="INSERT INTO expenses(name,price,category,date) VALUES (%s,%s,%s,%s);"
         value=mycursor.execute(query,(name,price,category,date))
         db.commit()
         mycursor.close()
@@ -36,7 +36,7 @@ def update():
         print("Enter your number from the given choices:\n" \
         "Change name of produce choose 1\n" \
         "Change price of produce choose 2\n" \
-        "Change catagory of produce choose 3\n" \
+        "Change category of produce choose 3\n" \
         "Change date of produce choose 4\n")
         choice=input("Enter your choice = ")
         db=connection()
@@ -54,7 +54,7 @@ def update():
         elif choice=="3":    
             id_p=(input("Enter the id of product which want to change = "))
             change=input("Enter new categoty of product = ")
-            query="UPDATE expenses SET catagory=%s WHERE id=%s;" 
+            query="UPDATE expenses SET category=%s WHERE id=%s;" 
             value=mycursor.execute(query,(change,id_p))    
         elif choice=="4":
             id_p=int(input("Enter the id of product which want to change = "))
@@ -88,7 +88,7 @@ def group_up():
     try:
         db=connection()
         mycursor=db.cursor()
-        query="SELECT catagory,sum(price) as 'Totle',AVG(price) as 'AVG' , COUNT(*) AS 'Count' FROM expenses GROUP BY catagory;"
+        query="SELECT category,sum(price) as 'Totle',AVG(price) as 'AVG' , COUNT(*) AS 'Count' FROM expenses GROUP BY catagory;"
         mycursor.execute(query)
         result=mycursor.fetchall()
         mycursor.close()
