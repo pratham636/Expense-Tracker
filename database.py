@@ -14,7 +14,7 @@ def connection():
 # def change_table(db):
 #     try:
 #         mycursor=db.cursor()
-#         # mycursor.execute("INSERT INTO expenses(name,price,catagory,date) VALUES ('apple',2.34,'food','2025-05-21');")
+#         # mycursor.execute("INSERT INTO expenses(name,price,category,date) VALUES ('apple',2.34,'food','2025-05-21');")
 #         db.commit()
 #     except Exception as e:
 #         print(f"The error is : {e}")
