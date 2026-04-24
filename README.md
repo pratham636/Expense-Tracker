@@ -15,8 +15,7 @@ A Python-based Command Line Interface application to manage and track daily expe
 ### 1. Prerequisites
 Ensure you have Python and MySQL installed. You will also need the MySQL connector:
 ```bash
-pip install mysql-connector-python
-
+pip install -r requirement.txt
 ### 2. Database Configuration
 Log into your MySQL server (via MySQL Workbench or Terminal) and run the following commands to set up the table structure. 
 
@@ -31,7 +30,7 @@ CREATE TABLE expenses (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     price FLOAT NOT NULL,
-    catagory VARCHAR(255),
+    category VARCHAR(255),
     date VARCHAR(50)
 );
 
