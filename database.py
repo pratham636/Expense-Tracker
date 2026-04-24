@@ -4,7 +4,7 @@ def connection():
         db=mysql.connector.connect(
             host="localhost",
             user="root",
-            passwd="password",
+            passwd=your_real_password,
             database="expenses_tracker"
         )
     except Exception as e:
