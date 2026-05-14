@@ -34,7 +34,7 @@ CREATE TABLE expenses (
     category VARCHAR(255),
     date VARCHAR(50)
 );
-
+```
 ### 3. Update Credentials
 Before running the application, open `database.py` and update the connection parameters with your local MySQL password:
 
@@ -45,6 +45,7 @@ db = mysql.connector.connect(
     passwd="your_password_here",
     database="expenses_tracker"
 )
+```
 ## 📂 Project Structure
 
 This project follows a modular structure to keep the database logic separate from the user interface:
