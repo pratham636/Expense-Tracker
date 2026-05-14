@@ -59,7 +59,6 @@ This project follows a modular structure to keep the database logic separate fro
 1.  Open your terminal or command prompt.
 2.  Navigate to the project folder.
 3.  Run the application using:
-    ```
-    bash
+    ```bash
     python main.py
     ```
